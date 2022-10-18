@@ -8,13 +8,15 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { from } from 'rxjs';
 import { FormsModule } from '@angular/forms';
+import { TimeoutComponent } from './timeout/timeout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    TimeoutComponent
   ],
   imports: [
     BrowserModule,
