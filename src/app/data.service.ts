@@ -4,6 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
+  UsersInfo = [
+    {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
+    {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
+    {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
+    {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
+    {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
+    {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"}
+]
    Register:any=[];
   constructor() { }
   VerifyData(register:any){
@@ -20,5 +28,8 @@ export class DataService {
   signUp(obj:any){
    this.Register.push(obj);
    console.log(obj);
+  }
+  getUserData(){
+    return this.UsersInfo;
   }
 }

@@ -1,1 +1,27 @@
-<p>home works!</p>
+
+
+<div class="container">
+
+
+    <table class="table" style="margin-top: 20px;">
+        <thead>
+          <tr >
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let obj of userInfo; index as i">
+            <th scope="row">{{i}}</th>
+            <td>{{obj.userName}}</td>
+            <td>{{obj.email}}</td>
+            <td><button type="button" class="btn btn-primary btn-sm" (click)="edit(i)" style="margin-right: 5px;">Edit</button>
+                <button type="button" class="btn btn-secondary btn-sm" (click)="delete(i)" >Delete</button></td>
+          </tr>
+     
+        
+        </tbody>
+      </table>
+</div>

@@ -23,6 +23,7 @@ export class SignupComponent implements OnInit {
       userName:  new FormControl('12345', [Validators.required]),
     });
   }
+ 
 
   onSubmit() {
     if(this.signUpForm.valid) {
