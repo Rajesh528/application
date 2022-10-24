@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { from } from 'rxjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TimeoutComponent } from './timeout/timeout.component';
+import { HeaderComponent } from './header/header.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { TimeoutComponent } from './timeout/timeout.component';
     SignupComponent,
     LoginComponent,
     HomeComponent,
-    TimeoutComponent
+    TimeoutComponent,
+    HeaderComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
