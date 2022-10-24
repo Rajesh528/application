@@ -16,7 +16,10 @@ export class HomeComponent implements OnInit {
   }
 
   getUsers(){
-    this.userInfo = this.dataSrvc.getUserData();
+    this.dataSrvc.getUserData().subscribe(res=>{
+      console.log(res);
+      this.userInfo = res;
+    });
   }
 
   edit(i:number){

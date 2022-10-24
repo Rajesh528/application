@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpParams, HttpResponse } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,9 @@ export class DataService {
     {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
     {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"},
     {email:"test@gmail.com", password:"12345" , confirmPassword:"", userName : "test"}
-]
+];
    Register:any=[];
-  constructor() { }
+  constructor(public http: HttpClient) { }
   VerifyData(register:any){
     for(var b of this.Register){
       if(b.email==register.email && b.password==register.password)
@@ -30,6 +31,7 @@ export class DataService {
    console.log(obj);
   }
   getUserData(){
-    return this.UsersInfo;
+    var url = "http://localhost:8080/userDetails";
+    return this.http.get(url);
   }
 }
